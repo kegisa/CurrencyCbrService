@@ -17,3 +17,5 @@ spring:
 logging:
   level:
     com.victorlevin.CurrencyCbrService.cbrclient : INFO
+  file:
+    name: logs/CurrencyService.log

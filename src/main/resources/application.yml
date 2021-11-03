@@ -1,0 +1,19 @@
+server:
+  port: 8004
+
+cbr:
+  url: "https://cbr.ru/scripts/XML_daily.asp"
+
+app:
+  rest:
+    api:
+      prefix: /rates
+
+spring:
+  cache:
+    caffeine:
+      spec: maximumSize=3,expireAfterAccess=24h
+
+logging:
+  level:
+    com.victorlevin.CurrencyCbrService.cbrclient : INFO

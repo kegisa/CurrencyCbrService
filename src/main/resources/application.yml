@@ -1,5 +1,5 @@
 server:
-  port: 8004
+  port: 8006
 
 cbr:
   url: "https://cbr.ru/scripts/XML_daily.asp"
@@ -16,6 +16,6 @@ spring:
 
 logging:
   level:
-    com.victorlevin.CurrencyCbrService.cbrclient : INFO
+    com.victorlevin.CurrencyCbrService.cbrclient : DEBUG
   file:
     name: logs/CurrencyService.log

@@ -1,5 +1,6 @@
 package com.victorlevin.CurrencyCbrService.parser;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.victorlevin.CurrencyCbrService.domain.CurrencyNominalRate;
 import com.victorlevin.CurrencyCbrService.exception.CurrencyRateParsingException;
 import lombok.extern.slf4j.Slf4j;
@@ -18,7 +19,7 @@ import java.util.List;
 
 @Service
 @Slf4j
-public class CbrXmlParser implements Parser{
+public class CbrXmlParser implements Parser {
     @Override
     public List<CurrencyNominalRate> parse(String ratesAsString) {
         var rates = new ArrayList<CurrencyNominalRate>();
@@ -56,6 +57,8 @@ public class CbrXmlParser implements Parser{
             log.error("xml parsing error, xml:{}", ratesAsString, ex);
             throw new CurrencyRateParsingException(ex);
         }
+
+
         return rates;
     }
 }
